@@ -3,6 +3,8 @@ import "./App.css";
 
 function App() {
   const [isLogin, setIsLogin] = useState(true);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   return (
     <>
@@ -24,8 +26,8 @@ function App() {
           {isLogin ? (
             <>
               <p>Sign in to continue</p>
-              <input type="text" placeholder="Email" />
-              <input type="password" placeholder="Password" />
+              <input type="text" placeholder="Enter your email" value={email} onChange={(e) => setEmail(e.target.value)}/>
+              <input type="password" placeholder="Enter your password" value={password} onChange={(e) => setPassword(e.target.value)}/>
               <button onClick={() => alert("Login functionality")}>
                 Sign In
               </button>
