@@ -19,7 +19,7 @@ function App() {
       {/* Main Content */}
       <div className="container">
         <div className="login-box">
-          <h2>Welcome</h2>
+          <h2>Welcome to Workshop Portal</h2>
 
           {isLogin ? (
             <>
