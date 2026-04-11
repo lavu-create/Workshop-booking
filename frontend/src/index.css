@@ -11,3 +11,27 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.login-box label {
+  display: block;
+  text-align: left;
+  margin-top: 10px;
+  font-size: 13px;
+  color: #444;
+}
+
+.login-box input {
+  margin-bottom: 5px;
+}
+
+.login-box button {
+  margin-top: 10px;
+}
+
+
+/* Small screens */
+@media (max-width: 600px) {
+  .container {
+    padding: 10px;
+  }
+}
