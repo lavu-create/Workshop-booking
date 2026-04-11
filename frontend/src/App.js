@@ -25,7 +25,7 @@ function App() {
 
           {isLogin ? (
             <>
-              <p>Sign in to continue</p>
+              <p>Access your account to book workshops</p>
               <label>Email</label>
               <input type="text" placeholder="Enter your email" value={email} onChange={(e) => setEmail(e.target.value)}/>
 
@@ -46,13 +46,13 @@ function App() {
               <p>
                 New here?{" "}
                 <span className="link" onClick={() => setIsLogin(false)}>
-                  Sign Up
+                  Sign Up/ Create Your Account
                 </span>
               </p>
             </>
           ) : (
             <>
-              <p>Create an account</p>
+              <p>Join us and explore workshops</p>
               <label>Name</label>
               <input type="text" placeholder="Enter your name" />
 
@@ -61,7 +61,7 @@ function App() {
 
               <label>Password</label>
               <input type="password" placeholder="Enter your password" />
-              
+
               <button onClick={() => alert("Signup functionality")}>
                 Sign Up
               </button>
