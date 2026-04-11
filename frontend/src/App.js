@@ -26,8 +26,12 @@ function App() {
           {isLogin ? (
             <>
               <p>Sign in to continue</p>
+              <label>Email</label>
               <input type="text" placeholder="Enter your email" value={email} onChange={(e) => setEmail(e.target.value)}/>
+
+              <label>Password</label>
               <input type="password" placeholder="Enter your password" value={password} onChange={(e) => setPassword(e.target.value)}/>
+
               <button onClick={() => alert("Login functionality")}>
                 Sign In
               </button>
@@ -49,9 +53,15 @@ function App() {
           ) : (
             <>
               <p>Create an account</p>
-              <input type="text" placeholder="Name" />
-              <input type="text" placeholder="Email" />
-              <input type="password" placeholder="Password" />
+              <label>Name</label>
+              <input type="text" placeholder="Enter your name" />
+
+              <label>Email</label>
+              <input type="text" placeholder="Enter your email" />
+
+              <label>Password</label>
+              <input type="password" placeholder="Enter your password" />
+              
               <button onClick={() => alert("Signup functionality")}>
                 Sign Up
               </button>
