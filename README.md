@@ -99,7 +99,7 @@ npm start
 ## 📸 Screenshots
 
 ### Before (Original UI)
-/frontend/screenshots/before_after_signup.png
+![Before](screenshots/before_after_signup.png)
 
 ### After (Improved UI)
 (Add your React UI screenshot here)
