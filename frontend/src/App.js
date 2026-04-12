@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./App.css";
 
 function App() {
-  const [page, setPage] = useState("login"); // NEW
+  const [page, setPage] = useState("home");
   const [isLogin, setIsLogin] = useState(true);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -117,22 +117,31 @@ function App() {
 
             <div className="filters">
               <h3>Filters</h3>
+              <label>From Date</label><input type="date" />
+              <label>To Date</label><input type="date" />
 
-              <label>From Date</label>
-              <input type="date" />
-              <label>To Date</label>
-              <input type="date" />
               <label>Workshop</label>
               <select>
                 <option>All</option>
                 <option>Python</option>
               </select>
+
               <label>State</label>
               <select>
                   <option>All</option>
                   <option>Delhi</option>
               </select>
-              <button>View</button>
+
+              <label>Sort By</label>
+              <select>
+                <option>Latest</option>
+                <option>Oldest</option>
+              </select>
+
+              <div style={{ display: "flex", gap: "10px" }}>
+                <button>View</button>
+                <button>Download</button>
+              </div>
             </div>
             
             <div className="table-section">
@@ -151,12 +160,9 @@ function App() {
                 </thead>
                 <tbody>
                   <tr>
-                    <td>1</td>
-                    <td>John</td>
-                    <td>IIT Bombay</td>
-                    <td>Dr X</td>
-                    <td>Python</td>
-                    <td>12-04-2026</td>
+                    <td colSpan="6" style={{ textAlign: "center", padding: "20px", color: "grey"}}>
+                      No workshop data available
+                    </td>
                   </tr>
                 </tbody>
               </table>
