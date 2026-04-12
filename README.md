@@ -99,6 +99,9 @@ npm start
 ## 📸 Screenshots
 
 ### Before (Original UI)
+![Before](screenshots/before_home.png)
+![Before](screenshots/before_signup_1.png)
+![Before](screenshots/before_signup_1.png)
 ![Before](screenshots/before_after_signup.png)
 
 ### After (Improved UI)
