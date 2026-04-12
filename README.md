@@ -2,7 +2,7 @@
 
 ## 🌐 Live Demo
 🚀 Deployed on Vercel:  
-https://your-project-name.vercel.app
+https://workshop-booking-six.vercel.app/
 
 ## 📌 Project Overview
 This project is an enhanced version of the existing Workshop Booking system developed by FOSSEE. The platform allows coordinators to book workshops and instructors to manage and respond to workshop requests.
