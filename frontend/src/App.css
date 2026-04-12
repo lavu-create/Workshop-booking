@@ -181,18 +181,60 @@ body {
 .stats-container {
   display: flex;
   width: 100%;
-  padding: 20px;
-  gap: 20px;
+  padding: 30px 10px 20px 10px;
+  gap: 10px;
   align-items: flex-start;
+  min-height: calc(100vh - 70px);
 }
 
-/* Filters box (left side) */
+/* Toggle button */
+.stats-wrapper {
+  display: flex;
+  align-items: flex-start;
+  transition: transform 0.3s ease;
+  width: 280px;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.stats-wrapper:has(.filters.hide) {
+  width: 70px;
+}
+
+/* floating toggle button */
+.toggle-btn-floating {
+  margin-left: 5px;
+  padding: 6px 10px;
+  background: #b2c0ff;
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Sliding effect */
 .filters {
-  width: 250px;
+  width: 240px;
+  transition: all 0.3s ease;
+  overflow: hidden;
   background: white;
   padding: 15px;
   border-radius: 12px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.filters.hide {
+  width: 0;
+  min-width: 0;
+  padding: 0;
+  margin: 0;
+  opacity: 0;
+}
+
+/* Visible state */
+.filters.show {
+  transform: translateX(0px);
+  opacity: 1;
 }
 
 .filters h3 {
@@ -206,9 +248,10 @@ body {
   padding: 8px;
   border-radius: 6px;
   border: 1px solid #ccc;
+  box-sizing: border-box;
 }
 
-.filters button {
+.filter-btn {
   width: 100%;
   margin-top: 10px;
   padding: 8px;
@@ -219,6 +262,20 @@ body {
   cursor: pointer;
 }
 
+.clear-btn {
+  height: 25px;
+  margin: 19px 0px 0px 0px;
+  background: #de2c2c;
+  color: rgb(252, 252, 252);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.clear-btn:hover {
+  text-decoration: underline;
+}
+
 /* Table section (right side) */
 .table-section {
   flex: 1;
@@ -226,6 +283,7 @@ body {
   padding: 20px;
   border-radius: 12px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  height: 100%;
 }
 
 .table-section h2 {

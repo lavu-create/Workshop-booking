@@ -6,6 +6,7 @@ function App() {
   const [isLogin, setIsLogin] = useState(true);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [showFilters, setShowFilters] = useState(true);
 
   return (
     <>
@@ -115,33 +116,38 @@ function App() {
         {page === "stats" && (
           <div className="stats-container">
 
-            <div className="filters">
-              <h3>Filters</h3>
-              <label>From Date</label><input type="date" />
-              <label>To Date</label><input type="date" />
-
-              <label>Workshop</label>
-              <select>
-                <option>All</option>
-                <option>Python</option>
-              </select>
-
-              <label>State</label>
-              <select>
+            <div className="stats-wrapper">
+              <div className={`filters ${showFilters ? "" : "hide"}`}>
+                <div style={{display: "flex", gap: "44px"}}>
+                  <h2>Filters</h2>
+                  <button className="clear-btn" onClick={() => alert("Filters cleared")}>X Clear</button>
+                </div>
+                <label>From Date</label><input type="date" />
+                <label>To Date</label><input type="date" />
+                <label>Workshop</label>
+                <select>
                   <option>All</option>
-                  <option>Delhi</option>
-              </select>
-
-              <label>Sort By</label>
-              <select>
-                <option>Latest</option>
-                <option>Oldest</option>
-              </select>
-
-              <div style={{ display: "flex", gap: "10px" }}>
-                <button>View</button>
-                <button>Download</button>
+                  <option>Python</option>
+                </select>
+                <label>State</label>
+                <select>
+                    <option>All</option>
+                    <option>Delhi</option>
+                </select>
+                <label>Sort By</label>
+                <select>
+                  <option>Latest</option>
+                  <option>Oldest</option>
+                </select>
+                <div style={{display: "flex", gap: "10px"}}>
+                  <button className="filter-btn">View</button>
+                  <button className="filter-btn">Download</button>
+                </div>
               </div>
+
+              <button className="toggle-btn-floating" onClick={() => setShowFilters(!showFilters)}>
+                {showFilters ? "Hide Filters" : "Show Filters"}
+              </button>
             </div>
             
             <div className="table-section">
