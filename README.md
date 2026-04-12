@@ -103,6 +103,8 @@ npm start
 ![Before](screenshots/before_signup_1.png)
 ![Before](screenshots/before_signup_1.png)
 ![Before](screenshots/before_after_signup.png)
+![Before](screenshots/before_forgot_password.png)
+![Before](screenshots/before_workshop_statistics.png)
 
 ### After (Improved UI)
 (Add your React UI screenshot here)
