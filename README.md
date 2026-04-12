@@ -99,12 +99,26 @@ npm start
 ## 📸 Screenshots
 
 ### Before (Original UI)
-<img src="screenshots/before_home.png" width="400"/>
-<img src="screenshots/before_signup_1.png" width="400"/>
-<img src="screenshots/before_signup_2.png" width="400"/>
-<img src="screenshots/before_after_signup.png" width="400"/>
-<img src="screenshots/before_forgot_password.png" width="400"/>
-<img src="screenshots/before_workshop_statistics.png" width="400"/>
+<p>
+  <a href="screenshots/before_home.png">
+    <img src="screenshots/before_home.png" width="200"/>
+  </a>
+  <a href="screenshots/before_signup_1.png">
+    <img src="screenshots/before_signup_1.png" width="200"/>
+  </a>
+  <a href="screenshots/before_signup_2.png">
+    <img src="screenshots/before_signup_2.png" width="200"/>
+  </a>
+  <a href="screenshots/before_after_signup.png">
+    <img src="screenshots/before_after_signup.png" width="200"/>
+  </a>
+  <a href="screenshots/before_forgot_password.png">
+    <img src="screenshots/before_forgot_password.png" width="200"/>
+  </a>
+  <a href="screenshots/before_workshop_statistics.png">
+    <img src="screenshots/before_workshop_statistics.png" width="200"/>
+  </a>
+</p>
 
 ### After (Improved UI)
 (Add your React UI screenshot here)
