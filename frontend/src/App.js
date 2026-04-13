@@ -242,7 +242,7 @@ function App() {
                   <div className="stats-container">
                     <div className="stats-wrapper">
                       <div className={`filters ${showFilters ? "" : "hide"}`}>
-                        <div style={{display: "flex", justifyContent:"space-between", gap: "106px"}}>
+                        <div style={{display: "flex", justifyContent:"space-between", gap: "20%"}}>
                           <h2>Filters</h2>
                           <button className="clear-btn" onClick={() => setFilters({fromDate: "",toDate: "",workshop: "All",state: "All",sort: "Latest"})}>X Clear</button>
                         </div>
