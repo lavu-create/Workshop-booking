@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import "./App.css";
 import chartImg from "./images/chart.png";
+import {
+  BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, PieChart, Pie, Cell
+} from "recharts";
 
 function App() {
   const [page, setPage] = useState("home");
@@ -9,6 +12,10 @@ function App() {
   const [password, setPassword] = useState("");
   const [showFilters, setShowFilters] = useState(true);
   const [chartType, setChartType] = useState(null);
+  const [showModal, setShowModal] = useState(false);
+  const stateData =[{ name: "Punjab", value: 0 },{ name: "Delhi", value: 0 },{ name: "UP", value: 0 }];
+  const workshopData = [];
+  const hasData = workshopData.some(item => item.value > 0);
 
   return (
     <>
@@ -157,11 +164,13 @@ function App() {
                     <img src={chartImg} alt="state-chart" />
                   </div>
                   <div>
-                    <button className="btn" onClick={() => setChartType("state")}>
+                    <button className="btn" onClick={() => {setChartType("state");
+                    setShowModal(true);}}>
                       State Chart
                     </button>
                   <div>
-                    <button className="btn" onClick={() => setChartType("workshop")}>
+                    <button className="btn" onClick={() => {setChartType("workshop");
+                    setShowModal(true);}}>
                       Workshop Chart
                     </button>
                   </div>
@@ -197,6 +206,45 @@ function App() {
           </div>
         )}
 
+        {showModal && (
+          <div className="modal-overlay" onClick={() => setShowModal(false)}>
+            <div className="modal-box" onClick={(e) => e.stopPropagation()}>
+              <button className="close-btn" onClick={() => setShowModal(false)}>x</button>
+              {chartType === "state" && (
+                <div>
+                  <h2>📊 State Chart</h2>
+                  <ResponsiveContainer width="100%" height={300}>
+                    <BarChart data={stateData}>
+                      <XAxis dataKey="name" />
+                      <YAxis />
+                      <Tooltip />
+                      <Bar dataKey="value" fill="#667eea" />
+                    </BarChart>
+                  </ResponsiveContainer>
+                </div>
+              )}
+              {chartType === "workshop" && (
+                <div>
+                  <h2>📈 Workshop Chart</h2>
+                  <ResponsiveContainer width="100%" height={300}>
+                    <PieChart>
+                      <Pie data={hasData?workshopData:[{ name: "No Data", value: 1 }]} dataKey="value" nameKey="name" outerRadius={100} label>
+                        {(hasData ? workshopData : [{ name: "No Data", value: 1 }]).map((entry, index) => (
+                          <Cell key={`cell-${index}`} fill={hasData ? "#667eea" : "#e5e7eb"}/>
+                        ))}
+                      </Pie>
+                    </PieChart>
+                  </ResponsiveContainer>
+                  {!hasData && (
+                    <p style={{textAlign: "center", marginTop: "0px",color: "gray", fontWeight: "bold"}}>
+                      No Workshop Data Available
+                    </p>
+                  )}
+                </div>
+              )}
+            </div>
+          </div>
+        )}
       </div>
     </>
   );
