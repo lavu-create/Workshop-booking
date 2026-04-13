@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./App.css";
+import chartImg from "./images/chart.png";
 
 function App() {
   const [page, setPage] = useState("home");
@@ -7,6 +8,7 @@ function App() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showFilters, setShowFilters] = useState(true);
+  const [chartType, setChartType] = useState(null);
 
   return (
     <>
@@ -145,9 +147,27 @@ function App() {
                 </div>
               </div>
 
-              <button className="toggle-btn-floating" onClick={() => setShowFilters(!showFilters)}>
-                {showFilters ? "Hide Filters" : "Show Filters"}
-              </button>
+              <div style={{ marginBottom: "10px", display: "flex", flexDirection: "column", gap: "10px" }}>
+                <button className="toggle-btn-floating" onClick={() => setShowFilters(!showFilters)}>
+                  {showFilters ? "Hide Filters" : "Show Filters"}
+                </button>
+
+                <div className="chart-btn-container">
+                  <div className="chart">
+                    <img src={chartImg} alt="state-chart" />
+                  </div>
+                  <div>
+                    <button className="btn" onClick={() => setChartType("state")}>
+                      State Chart
+                    </button>
+                  <div>
+                    <button className="btn" onClick={() => setChartType("workshop")}>
+                      Workshop Chart
+                    </button>
+                  </div>
+                  </div>
+                </div>
+              </div>
             </div>
             
             <div className="table-section">
