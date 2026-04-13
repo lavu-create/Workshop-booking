@@ -4,6 +4,7 @@ import chartImg from "./images/chart.png";
 import {
   BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, PieChart, Pie, Cell
 } from "recharts";
+import { State } from "country-state-city";
 
 function App() {
   const [page, setPage] = useState("home");
@@ -16,6 +17,7 @@ function App() {
   const stateData =[{ name: "Punjab", value: 0 },{ name: "Delhi", value: 0 },{ name: "UP", value: 0 }];
   const workshopData = [];
   const hasData = workshopData.some(item => item.value > 0);
+  const states = State.getStatesOfCountry("IN");
 
   return (
     <>
@@ -140,8 +142,10 @@ function App() {
                 </select>
                 <label>State</label>
                 <select>
-                    <option>All</option>
-                    <option>Delhi</option>
+                  <option>All States</option>
+                  {states.map((s) => (
+                    <option key={s.isoCode} value={s.name}>{s.name}</option>
+                  ))}
                 </select>
                 <label>Sort By</label>
                 <select>
