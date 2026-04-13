@@ -121,7 +121,38 @@ npm start
 </p>
 
 ### After (Improved UI)
-(Add your React UI screenshot here)
+<p>
+  <a href="screenshots/after_login.png">
+    <img src="screenshots/after_login.png" width="200"/>
+  </a>
+  <a href="screenshots/after_signup.png">
+    <img src="screenshots/after_signup.png" width="200"/>
+  </a>
+  <a href="screenshots/after_home.png">
+    <img src="screenshots/after_home.png" width="200"/>
+  </a>
+  <a href="screenshots/after_filter_1.png">
+    <img src="screenshots/after_filter_1.png" width="200"/>
+  </a>
+  <a href="screenshots/after_workshops.png">
+    <img src="screenshots/after_workshops.png" width="200"/>
+  </a>
+  <a href="screenshots/after_statistics_2.png">
+    <img src="screenshots/after_statistics_2.png" width="200"/>
+  </a>
+  <a href="screenshots/after_filter_2.png">
+    <img src="screenshots/after_filter_2.png" width="200"/>
+  </a>
+  <a href="screenshots/after_state_chart.png">
+    <img src="screenshots/after_state_chart.png" width="200"/>
+  </a>
+  <a href="screenshots/after_statistics_1.png">
+    <img src="screenshots/after_statistics_1.png" width="200"/>
+  </a>
+  <a href="screenshots/after_workshop_chart.png">
+    <img src="screenshots/after_workshop_chart.png" width="200"/>
+  </a>
+</p>
 
 ---
 
