@@ -3,6 +3,8 @@ import "./App.css";
 import chartImg from "./images/chart.png";
 import welcome_img from "./images/welcome.png";
 import signup_img from "./images/signup.png";
+import home_img from "./images/home.png";
+import home_pic_img from "./images/home-pic.png";
 import {BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, PieChart, Pie, Cell} from "recharts";
 import { State } from "country-state-city";
 
@@ -200,9 +202,21 @@ function App() {
             {authPage !== "login" && authPage !== "signup" && (
               <>
                 {page === "home" && (
-                  <div className="login-box">
-                    <h2>Welcome</h2>
-                   <p>Explore and book workshops easily</p>
+                  <div id="home-div" className="login-box">
+                    <img src={home_img} alt="Greetings!" />
+                    <div className="overlay-text">
+                      <h2>Welcome !</h2>
+                      <p>Discover, learn, and book hands-on workshops in programming, AI, and engineering — all in one place. Explore and book workshops easily
+                      </p>
+                      <h3>Upskill yourself with real-world learning experiences</h3>
+                      <div id="home-pic"><img src={home_pic_img} alt="Lets grow together!"/></div>
+                      <div className="home-points">
+                      <div>💻 Learn by Doing</div>
+                      <div>📊 Track Your Growth</div>
+                      <div>🌍 Explore Domains</div>
+                      <div>📅 Easy Booking</div>
+                      </div>
+                    </div>
                   </div>
                 )}
 
@@ -259,17 +273,15 @@ function App() {
                           <button className="filter-btn">View</button>
                           <button className="filter-btn">Download</button>
                         </div>
-
+                      </div>
+                      <div className="chart-btn-container">
                         <div style={{ marginBottom: "10px", display: "flex", flexDirection: "column", gap: "10px" }}>
                           <button className="toggle-btn-floating" onClick={() => setShowFilters(!showFilters)}>
                             {showFilters ? "Hide Filters" : "Show Filters"}
                           </button>
                         </div>
-
-                        <div className="chart-btn-container">
-                          <div className="chart">
+                        <div className="chart">
                             <img src={chartImg} alt="state-chart" />
-                          </div>
                         </div>
                         <div>
                           <button className="btn" onClick={() => {setChartType("state");setShowModal(true);}}>

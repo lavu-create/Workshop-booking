@@ -156,6 +156,53 @@ body {
   }
 }
 
+/*Home Page*/
+#home-div {
+  position: relative;
+  display: block;
+}
+#home-div img {
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+.overlay-text h2 {
+  position: absolute;
+  top: 0px;
+  right: 44px;
+  font-size: 40px;
+}
+.overlay-text h3 {
+  position: absolute;
+  top: 70px;
+  right: 44px;
+  text-align: right;
+  width: 20%;
+}
+.overlay-text p {
+  position: absolute;
+  top: 0px;
+  left: 20px;
+  color: black;
+}
+.home-points {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 40px;
+  right: 44px;
+  font-size: 25px;
+}
+#home-pic {
+  position: absolute;
+  top: 150px;
+  right: 44px;
+  height: 40%;
+  width: 18%;
+}
+
+
 /* Workshop Section */
 .workshop-container {
   text-align: center;
@@ -247,6 +294,7 @@ body {
   border: none;
   cursor: pointer;
   border: 1px solid black;
+  font-size: 17px;
 }
 .btn {
   color: rgb(255, 255, 255);
