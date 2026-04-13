@@ -132,7 +132,7 @@ npm start
     <img src="screenshots/after_home.png" width="200"/>
   </a>
   <a href="screenshots/after_filter_1.png">
-    <img src="screenshots/after_filter_1.png" width="200"/>
+    <img src="screenshots/after_filter_1.png" width="50"/>
   </a>
   <a href="screenshots/after_workshops.png">
     <img src="screenshots/after_workshops.png" width="200"/>
@@ -141,7 +141,7 @@ npm start
     <img src="screenshots/after_statistics_2.png" width="200"/>
   </a>
   <a href="screenshots/after_filter_2.png">
-    <img src="screenshots/after_filter_2.png" width="200"/>
+    <img src="screenshots/after_filter_2.png" width="50"/>
   </a>
   <a href="screenshots/after_state_chart.png">
     <img src="screenshots/after_state_chart.png" width="200"/>
